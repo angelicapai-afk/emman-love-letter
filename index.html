@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Emman 🤍</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f8f1eb;
+  color: #493c3b;
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+.cover {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.cover-content {
+  max-width: 600px;
+}
+
+.small {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(50px, 12vw, 85px);
+  line-height: 0.9;
+  margin: 25px 0;
+}
+
+.subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  opacity: 0.75;
+}
+
+/* ENVELOPE */
+
+.envelope {
+  width: 170px;
+  height: 110px;
+  background: #e8cfcb;
+  margin: 50px auto 20px;
+  position: relative;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 15px 35px rgba(80,50,50,0.15);
+  transition: 0.3s;
+}
+
+.envelope:hover {
+  transform: translateY(-6px);
+}
+
+.envelope::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 85px solid transparent;
+  border-right: 85px solid transparent;
+  border-top: 60px solid #d9b7b5;
+}
+
+.heart-seal {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.tap {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* LETTER */
+
+.hidden {
+  display: none;
+}
+
+.letter-section {
+  padding: 70px 20px 100px;
+}
+
+.paper {
+  max-width: 720px;
+  margin: auto;
+  background: #fffdfb;
+  padding: 55px;
+  box-shadow: 0 20px 60px rgba(80,50,50,0.12);
+  position: relative;
+}
+
+.paper::before {
+  content: "";
+  position: absolute;
+  inset: 15px;
+  border: 1px solid #ead8d2;
+  pointer-events: none;
+}
+
+h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+.divider {
+  text-align: center;
+  margin: 50px 0;
+  color: #b78f89;
+  letter-spacing: 8px;
+}
+
+.special {
+  background: #f5eee9;
+  padding: 30px;
+  margin: 40px 0;
+  border-radius: 8px;
+}
+
+.special h3 {
+  font-size: 32px;
+  margin-top: 0;
+}
+
+.quote {
+  font-size: 30px;
+  text-align: center;
+  font-style: italic;
+  margin: 45px 0;
+}
+
+.signature {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  text-align: right;
+  margin-top: 40px;
+}
+
+/* END */
+
+.final {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 25px;
+}
+
+.final h2 {
+  font-size: clamp(45px, 10vw, 75px);
+  line-height: 1;
+  max-width: 750px;
+}
+
+.final p {
+  max-width: 600px;
+}
+
+button {
+  border: none;
+  background: #493c3b;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 30px;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .paper {
+    padding: 35px 25px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
+  p {
+    font-size: 21px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- OPENING -->
+
+<section class="cover">
+
+<div class="cover-content">
+
+<div class="small">
+A little something for you
+</div>
+
+<h1>
+For Emman,<br>
+with love.
+</h1>
+
+<div class="subtitle">
+A letter I hope you keep in your heart. 🤍
+</div>
+
+<div class="envelope" onclick="openLetter()">
+
+<div class="heart-seal">
+♡
+</div>
+
+</div>
+
+<div class="tap">
+tap the letter to open
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LETTER -->
+
+<main id="letter" class="hidden">
+
+<section class="letter-section">
+
+<article class="paper">
+
+<div class="small">
+September 2026 · from Angel
+</div>
+
+<h2>
+Hi, baby. 🤍
+</h2>
+
+<p>
+I just really wanted to tell you how thankful I am na ikaw yung dumating sa buhay ko. I love you so much, baby. Sobrang saya ko knowing na mahal mo ako and I get to love you too.
+</p>
+
+<p>
+Thank you for always choosing me and for never giving up on me, kahit alam kong hindi ako laging madaling intindihin at mahalin. Thank you for being patient with me and for reminding me that I'm still worth loving, even on the days na hindi ko feel yun about myself.
+</p>
+
+<div class="divider">
+♡ · ♡ · ♡
+</div>
+
+<div class="special">
+
+<h3>
+Something I want you to know
+</h3>
+
+<p>
+I'm so proud of you, baby — sa lahat ng ginagawa mo, sa lahat ng pinagdaanan mo, and most especially sa way you love Jai.
+</p>
+
+<p>
+I want you to know na I love her too. Not just because she's your daughter, but because she's Jai. I genuinely want to be part of her life, see her grow, and be someone she knows will always care for her. 🤍
+</p>
+
+</div>
+
+<p>
+I know hindi magiging perfect lahat for us. May mga hard days, misunderstandings, and moments na mapapagod tayo. But I hope we always remember na we're on the same team.
+</p>
+
+<p>
+I want to be there for you not only when life is easy, but especially when things get hard.
+</p>
+
+<p>
+I want to love every version of you — the happy you, tired you, stubborn you, soft you, and even the version of you that you're still becoming.
+</p>
+
+<p>
+I want to grow with you, see your dreams come true, and be beside you through everything.
+</p>
+
+<p class="quote">
+"If I get to choose, I want it to be you, me, and Jai." 🤍
+</p>
+
+<p>
+I don't know exactly what our future will look like, but I know I want to keep choosing you.
+</p>
+
+<p>
+Thank you for loving me the way you do and for letting me be part of your and Jai's story.
+</p>
+
+<p>
+I'll keep loving every version of you, through every version of our life.
+</p>
+
+<div class="signature">
+Always yours,<br>
+<strong>Angel</strong> ♡
+</div>
+
+</article>
+
+</section>
+
+
+<!-- FINAL MESSAGE -->
+
+<section class="final">
+
+<div class="small">
+and one last thing...
+</div>
+
+<h2>
+Buti na lang,<br>
+pinili natin isa't isa.
+</h2>
+
+<p>
+Whatever life brings us, I hope we never forget how we found our way to each other.
+</p>
+
+<p>
+I love you both so much. 🤍
+</p>
+
+<button onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+Read it again ♡
+</button>
+
+</section>
+
+</main>
+
+
+<script>
+
+function openLetter() {
+
+  document.getElementById("letter").classList.remove("hidden");
+
+  setTimeout(function() {
+
+    document.getElementById("letter").scrollIntoView({
+      behavior: "smooth"
+    });
+
+  }, 200);
+
+}
+
+</script>
+
+</body>
+</html>
